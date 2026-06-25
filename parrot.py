@@ -9,7 +9,7 @@ print("..........................................................")
 print("..........................................................")
 print("\n")
 
-# restaurant sitting places 
+# restaurant sitting places
 people_waiting = input("How many people are you in total: ")
 people_waiting = int(people_waiting)
 
