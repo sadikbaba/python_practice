@@ -39,3 +39,29 @@ new_album2 = make_album("Ed Sheeran", "Divide", 12)
 
 print(new_album1)
 print(new_album2)
+
+# Start with your program from Exercise 8-7. Write a while
+# loop that allows users to enter an album’s artist and title. Once you have that
+# information, call make_album() with the user’s input and print the dictionary
+# that’s created. Be sure to include a quit value in the while loop.
+
+def make_album(artist_name, album_title, num_tracks=None):
+    album = {"artist_name": artist_name.title(), "album_title": album_title.title()}
+    if num_tracks is not None:
+        album["num_tracks"] = num_tracks
+    return album    
+
+
+while True:
+    print("\nPlease enter the album's artist and title (or 'q' to quit):")
+    artist = input("Artist: ")
+    if artist.lower() == 'q':
+        break
+    title = input("Title: ")
+    if title.lower() == 'q':
+        break
+    num_tracks_input = input("Number of tracks (optional): ")
+    num_tracks = int(num_tracks_input) if num_tracks_input.isdigit() else None
+
+    album_info = make_album(artist, title, num_tracks)
+    print(album_info)
