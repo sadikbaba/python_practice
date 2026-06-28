@@ -11,3 +11,22 @@ def get_city_names(city, country):
     """Return a formatted city and country name."""
     return f"{city.title()}, {country.title()}"
 print(get_city_names('santiago', 'chile'))
+
+
+# 11-2. Population: Modify your function so it requires a third parameter,
+# population. It should now return a single string of the form City, Country –
+# population xxx, such as Santiago, Chile – population 5000000. Run
+# test_cities.py again. Make sure test_city_country() fails this time.
+# Modify the function so the population parameter is optional. Run
+# test_cities.py again, and make sure test_city_country() passes again.
+# Write a second test called test_city_country_population() that veri-
+# fies you can call your function with the values 'santiago', 'chile', and
+# 'population=5000000'. Run test_cities.py again, and make sure this new test
+# passes.
+
+def modify_city_names(city, country, population):
+    """Return a formatted city and country name, with optional population."""
+    if population:
+        return f"{city.title()}, {country.title()} - population {population}"
+    else:
+        return f"{city.title()}, {country.title()}"
