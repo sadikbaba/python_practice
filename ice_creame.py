@@ -7,6 +7,7 @@
 
 import oop_assignment as restaurant
 
+
 class IceCreamStand(restaurant.Restaurant):
     def __init__(self, restaurant_name, restaurant_workers, flavors):
         super().__init__(restaurant_name, restaurant_workers)
@@ -15,7 +16,10 @@ class IceCreamStand(restaurant.Restaurant):
     def display_flavors(self):
         print(f"Available ice cream flavors: {', '.join(self.flavors)}")
 
-ice_cream_stand = IceCreamStand("Sweet Treats", 5, ["Vanilla", "Chocolate", "Strawberry", "Mint"])
+
+ice_cream_stand = IceCreamStand(
+    "Sweet Treats", 5, ["Vanilla", "Chocolate", "Strawberry", "Mint"]
+)
 ice_cream_stand.describe_restaurant()
 ice_cream_stand.display_flavors()
 
@@ -29,19 +33,21 @@ ice_cream_stand.display_flavors()
 
 from oop import User
 
+
 class Admin(User):
     def __init__(self, firstName, lastName, gender, privileges):
-        super().__init__(firstName, lastName,gender)
+        super().__init__(firstName, lastName, gender)
         self.privileges = privileges
 
     def show_privileges(self):
         print(f"Admin privileges: {', '.join(self.privileges)}")
-    
 
 
-admin_user = Admin("John", "Doe", "man", ["can add post", "can delete post", "can ban user"])
+admin_user = Admin(
+    "John", "Doe", "man", ["can add post", "can delete post", "can ban user"]
+)
 admin_user.describe_User()
-admin_user.show_privileges()    
+admin_user.show_privileges()
 
 # Write a separate Privileges class. The class should have one
 # attribute, privileges, that stores a list of strings as described in Exercise 9-7.
@@ -59,4 +65,3 @@ class Privileges:
 
 
 privileges = Privileges(["can add post", "can delete post", "can ban user"])
-

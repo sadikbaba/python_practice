@@ -7,10 +7,13 @@
 # with values such as 'santiago' and 'chile' results in the correct string. Run
 # test_cities.py, and make sure test_city_country() passes.
 
+
 def get_city_names(city, country):
     """Return a formatted city and country name."""
     return f"{city.title()}, {country.title()}"
-print(get_city_names('santiago', 'chile'))
+
+
+print(get_city_names("santiago", "chile"))
 
 
 # 11-2. Population: Modify your function so it requires a third parameter,
@@ -23,6 +26,7 @@ print(get_city_names('santiago', 'chile'))
 # fies you can call your function with the values 'santiago', 'chile', and
 # 'population=5000000'. Run test_cities.py again, and make sure this new test
 # passes.
+
 
 def modify_city_names(city, country, population):
     """Return a formatted city and country name, with optional population."""

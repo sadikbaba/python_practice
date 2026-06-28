@@ -1,3 +1,3 @@
-with open ('pi_digit.txt') as file_object:
+with open("pi_digit.txt") as file_object:
     content = file_object.read()
     print(content)
